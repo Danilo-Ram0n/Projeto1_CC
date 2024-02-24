@@ -100,6 +100,17 @@ public class Main {
                     salvarEvento(evento);
                     break;
                 case 3:
+                    System.out.println("Entre com o número do evento que deseja entrar:");
+                    int numEvento = scanner.nextInt();
+                    scanner.nextLine();
+                    if (numEvento >= 1 && numEvento <= eventos.size()) {
+                        Evento eventoSelecionado = eventos.get(numEvento - 1);
+                        clienteLogado.entrarEvento(eventoSelecionado);
+                        System.out.println("Você entrou no evento: " + eventoSelecionado.nome);
+
+                    } else {
+                        System.out.println("Número de evento inválido.");
+                    }
                     break;
                 case 4:
                     logado = false;
