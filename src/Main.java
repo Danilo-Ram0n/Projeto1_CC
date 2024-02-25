@@ -77,9 +77,17 @@ public class Main {
                         System.out.println("Categoria: " + evento.TipoCategoria());
                         System.out.println("Horário: " + evento.horario);
                         System.out.println("Descrição: " + evento.descricao);
+
+                        if (evento.jaOcorreu()) {
+                            System.out.println("Este evento já ocorreu.");
+                        } else {
+                            System.out.println("Este evento ainda vai ocorrer.");
+                        }
                         System.out.println();
+
                     }
                     break;
+
                 case 2:
                     System.out.println("Criar Evento:");
                     System.out.println("Nome: ");

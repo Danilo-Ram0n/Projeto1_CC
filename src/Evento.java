@@ -42,14 +42,5 @@ public class Evento {
         return horario.isBefore(agora);
     }
 
-    public static List<Evento> proximosEventos() {
-        LocalDateTime agora = LocalDateTime.now();
-        List<Evento> eventosProximos = new ArrayList<>();
-        for (Evento evento : listaEventos) {
-            if (evento.horario.isAfter(agora)) {
-                eventosProximos.add(evento);
-            }
-        }
-        return eventosProximos;
-    }
+
 }
